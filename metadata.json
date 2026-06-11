@@ -1,0 +1,6 @@
+{
+  "name": "Quiz Snake",
+  "description": "Game edukatif berbasis web yang menggabungkan mekanisme permainan Snake klasik dengan sistem kuis interaktif demi melatih refleks, ingatan, dan pengetahuan.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

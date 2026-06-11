@@ -1,0 +1,47 @@
+{
+  "entities": {
+    "LeaderboardEntry": {
+      "title": "LeaderboardEntry",
+      "description": "Represents a single player score entry on the global leaderboard.",
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "Unique identifier of the leaderboard entry."
+        },
+        "name": {
+          "type": "string",
+          "description": "The display name of the player."
+        },
+        "score": {
+          "type": "integer",
+          "description": "The final score achieved by the player."
+        },
+        "correctAnswers": {
+          "type": "integer",
+          "description": "The total number of quiz questions answered correctly."
+        },
+        "accuracy": {
+          "type": "number",
+          "description": "The accuracy percentage of the user's answers (0 to 100)."
+        },
+        "difficulty": {
+          "type": "string",
+          "description": "The difficulty level chosen by the player (Mudah, Sedang, Sulit)."
+        },
+        "createdAt": {
+          "type": "string",
+          "format": "date-time",
+          "description": "Timestamp when this game score was recorded."
+        }
+      },
+      "required": ["name", "score", "correctAnswers", "accuracy", "difficulty", "createdAt"]
+    }
+  },
+  "firestore": {
+    "/leaderboard/{entryId}": {
+      "schema": "LeaderboardEntry",
+      "description": "Collection storing high scores achieved by players."
+    }
+  }
+}
